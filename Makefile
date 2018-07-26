@@ -13,7 +13,6 @@ build: clean
 	helm lint ${DIR}
 
 install:
-	helm ls ${TILLER_NS} ${TLS_OPTS}
 	helm upgrade ${TILLER_NS} ${TLS_OPTS} ${NAMESPACE} ${DIR} --install --namespace ${NAMESPACE} --wait --timeout 600 --debug
 
 delete:
