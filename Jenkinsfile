@@ -10,7 +10,7 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
-            sh 'jx step helm build --tiller-namespace ops'
+            sh 'make build'
           }
         }
       }
@@ -22,7 +22,7 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
-            sh 'jx step helm apply'
+            sh 'make install'
           }
         }
       }
