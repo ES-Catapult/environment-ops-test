@@ -17,7 +17,7 @@ install:
 	helm upgrade ${TILLER_NS} ${TLS_OPTS} ${NAMESPACE} ${DIR} --install --namespace ${NAMESPACE} --debug
 
 delete:
-	helm delete --purge ${NAMESPACE}  --namespace ${NAMESPACE}
+	helm delete --purge ${TILLER_NS} ${TLS_OPTS} ${NAMESPACE}  --namespace ${NAMESPACE}
 
 clean:
 
