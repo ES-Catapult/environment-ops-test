@@ -7,7 +7,6 @@ OS := $(shell uname)
 
 build: clean
 	rm -rf requirements.lock
-	helm version ${TILLER_NS} ${TLS_OPS}
 	helm init 
 	helm repo add releases ${CHART_REPO}
 	helm repo add jenkins-x http://chartmuseum.build.cd.jenkins-x.io
