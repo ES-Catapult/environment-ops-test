@@ -19,7 +19,12 @@ pipeline {
       }
       steps {
         container('maven') {
-          sh 'make install'
+          try {
+            sh 'make install'
+          }
+          catch (exc) {
+            sh 'make delete'
+          } 
         }
       }
     }
