@@ -19,6 +19,7 @@ pipeline {
       }
       steps {
         container('maven') {
+          sh 'make delete'
           sh 'make install'
         }
       }
