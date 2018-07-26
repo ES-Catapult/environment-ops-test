@@ -1,5 +1,5 @@
-TILLER_NS := "--tiller-namespace ops"
-TLS_OPTS := "--tls --tls-ca-cert /etc/ssl/helm/ca.pem --tls-cert /etc/ssl/helm/cert.pem --tls-key /etc/ssl/helm/key.pem"
+TILLER_NS := --tiller-namespace ops
+TLS_OPTS := --tls --tls-ca-cert /etc/ssl/helm/ca.pem --tls-cert /etc/ssl/helm/cert.pem --tls-key /etc/ssl/helm/key.pem
 CHART_REPO := http://jenkins-x-chartmuseum:8080
 DIR := "env"
 NAMESPACE := "ops-scratch"
