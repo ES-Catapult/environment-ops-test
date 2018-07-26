@@ -9,9 +9,7 @@ pipeline {
     stage('Validate Environment') {
       steps {
         container('maven') {
-          dir('env') {
-            sh 'make build'
-          }
+          sh 'make build'
         }
       }
     }
@@ -21,9 +19,7 @@ pipeline {
       }
       steps {
         container('maven') {
-          dir('env') {
-            sh 'make install'
-          }
+          sh 'make install'
         }
       }
     }
