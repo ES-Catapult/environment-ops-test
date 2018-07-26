@@ -17,15 +17,15 @@ pipeline {
       when {
         branch 'master'
       }
-      steps {
-        container('maven') {
-          try {
+      try {
+        steps {
+          container('maven') {
             sh 'make install'
           }
-          catch (exc) {
-            sh 'make delete'
-          } 
         }
+      }
+      catch(e) {
+        sh 'make delete'
       }
     }
   }
