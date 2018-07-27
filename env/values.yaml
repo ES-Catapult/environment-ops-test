@@ -31,16 +31,16 @@ jx-flo:
     requests:
       cpu: 200m
       memory: 1Gi
-  postgres: jx-test-postgresql
+  postgres: ops-scratch-postgresql
   postgresUser: "flo"
-  postgresSecret: jx-test-postgresql
-  mongodb: jx-test-mongodb
+  postgresSecret: ops-scratch-postgresql
+  mongodb: ops-scratch-mongodb
   mongodbUser: "flo"
-  mongodbSecret: jx-test-mongodb
-  redis: jx-test-redis-master
-  rabbit: jx-test-rabbitmq
+  mongodbSecret: ops-scratch-mongodb
+  redis: ops-scratch-redis-master
+  rabbit: ops-scratch-rabbitmq
   rabbitUser: "flo"
-  rabbitSecret: jx-test-rabbitmq
+  rabbitSecret: ops-scratch-rabbitmq
   jwtSecret: "flo-jwt"
 
 postgresql:
