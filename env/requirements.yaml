@@ -1,4 +1,7 @@
 dependencies:
+- name: jx-flo
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.52
 - name: node-http
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.2
