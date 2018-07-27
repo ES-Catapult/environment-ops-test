@@ -22,3 +22,42 @@ expose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
+    
+jx-flo:
+  resources:
+    limits:
+      cpu: 400m
+      memory: 2Gi
+    requests:
+      cpu: 200m
+      memory: 1Gi
+  postgres: jx-test-postgresql
+  postgresUser: "flo"
+  postgresSecret: jx-test-postgresql
+  mongodb: jx-test-mongodb
+  mongodbUser: "flo"
+  mongodbSecret: jx-test-mongodb
+  redis: jx-test-redis-master
+  rabbit: jx-test-rabbitmq
+  rabbitUser: "flo"
+  rabbitSecret: jx-test-rabbitmq
+  jwtSecret: "flo-jwt"
+
+postgresql:
+  postgresDatabase: "flo"
+  postgresUser: "flo"
+  postgresPassword: "password"
+  
+mongodb:
+  mongodbDatabase: "flo"
+  mongodbUsername: "flo"
+  mongodbPassword: "password"
+  
+rabbitmq:
+  rabbitmq:
+    username: "flo"
+    password: "password"
+
+redis:
+  usePassword: false
+
