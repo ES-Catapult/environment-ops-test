@@ -1,12 +1,7 @@
 dependencies:
-# - name: exposecontroller
-#   version: 2.3.58
-#   repository: https://chartmuseum.build.cd.jenkins-x.io
-#   alias: expose
-# - name: exposecontroller
-#   version: 2.3.58
-#   repository: https://chartmuseum.build.cd.jenkins-x.io
-#   alias: cleanup
+- name: node-http
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.2
 - name: redis
   repository: https://kubernetes-charts.storage.googleapis.com
   version: 3.6.0
